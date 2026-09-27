@@ -1,39 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For My Sachu 💗</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e7, #fff0f6);
+      color: #5a3042;
+      text-align: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .heart {
+      font-size: 70px;
+      animation: beat 1s infinite;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.75);
+      margin: 25px auto;
+      padding: 25px;
+      border-radius: 25px;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(120,50,80,0.15);
+    }
+
+    button {
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      background: #ff6f9f;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>Hey Sachu 💗</h1>
+  <section class="hero">
 
-  <h2>I made something special for you...</h2>
+    <div class="heart">💗</div>
 
-  <p>
-    This little website is just for you. 🥹
-  </p>
+    <h1>Hey Sachu...</h1>
 
-  <hr>
+    <p>
+      I made a little corner of the internet<br>
+      just for you. 🥹
+    </p>
 
-  <h2>💌 A Little Message</h2>
+    <div class="card">
+      <h2>💌 For My Favourite Person</h2>
 
-  <p>
-    You are a very special part of my life.
-    Thank you for all the memories, laughs and little moments.
-    I hope this makes you smile. ❤️
-  </p>
+      <p>
+        You are a special part of my life,
+        and I wanted to make something
+        that is only for you.
+      </p>
 
-  <h2>📸 Our Memories</h2>
+      <button onclick="showSurprise()">
+        Click for a surprise 🎁
+      </button>
 
-  <p>Our photos will go here soon. 🫶</p>
+      <div id="surprise">
+        I love you, Sachu. ❤️
+        <br><br>
+        Happy Boyfriend Day! 🫶
+      </div>
+    </div>
 
-  <h2>🎁 One More Thing...</h2>
+  </section>
 
-  <p>
-    No matter how simple this website is,
-    I made it specially for you. 💗
-  </p>
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
